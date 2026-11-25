@@ -1,0 +1,42 @@
+{
+  "enable": {
+    "type": "bool",
+    "description": "总开关",
+    "default": true
+  },
+  "stealer_name": {
+    "type": "string",
+    "description": "表情包插件的插件名",
+    "default": "astrbot_plugin_stealer"
+  },
+  "groups": {
+    "type": "list",
+    "description": "生效的群号，留空=所有群",
+    "default": []
+  },
+  "judge_provider_id": {
+    "type": "string",
+    "description": "看图用的视觉模型",
+    "default": "deepseek/deepseek-flash"
+  },
+  "probability": {
+    "type": "float",
+    "description": "判定“像 ds 设定的表情包”之后真正收录的概率",
+    "default": 0.9
+  },
+  "max_kb": {
+    "type": "int",
+    "description": "只收这个大小以下的图（表情包通常很小）",
+    "default": 2048
+  },
+  "cooldown_seconds": {
+    "type": "int",
+    "description": "同一个群两次判定的最小间隔",
+    "default": 15
+  },
+  "max_judge_per_hour": {
+    "type": "int",
+    "description": "同一个群每小时最多判几张（视觉调用有成本）",
+    "default": 12
+  }
+}
